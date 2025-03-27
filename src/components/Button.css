@@ -1,0 +1,11 @@
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: var(--text-hover-color);
+    background-color: var(--bg-hover-color);
+} 
