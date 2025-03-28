@@ -1,9 +1,5 @@
 import PropTypes from 'prop-types';
 
-// const callBack = (e) => {
-// 	props.callBack(e);
-// };
-
 function ButtonDemo(props) {
 	return (
 		<button type='button' className='btn' onClick={props.callBack}>
