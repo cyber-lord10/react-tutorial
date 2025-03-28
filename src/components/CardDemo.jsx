@@ -1,16 +1,19 @@
 import ButtonDemo from './ButtonDemo.jsx';
+import ProfilePicture from './ProfilePicture.jsx';
 
 function CardDemo() {
 	const callBack = (e) => {
 		const nextEle = e.target.nextElementSibling;
-		nextEle.textContent = 'You clicked my senior!!';
-		nextEle.classList.add('para');
-		alert('Button clicked!');
+		if (nextEle) {
+			nextEle.textContent = 'You clicked my senior!!';
+			nextEle.classList.add('para');
+			alert('Button clicked!');
+		}
 	};
 
 	return (
 		<>
-			<ButtonDemo text='text' callBack={callBack} />
+			<ButtonDemo callBack={callBack} />
 			<p></p>
 		</>
 	);

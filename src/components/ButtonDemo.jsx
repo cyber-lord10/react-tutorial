@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 
-function ButtonDemo(props) {
+const defText = 'Button';
+const defCallBack = () => {
+	alert('Default button clicked!');
+};
+
+function ButtonDemo({ text = defText, callBack = defCallBack }) {
 	return (
-		<button type='button' className='btn' onClick={props.callBack}>
-			{props.text}
+		<button type='button' className='btn' onClick={callBack}>
+			{text}
 		</button>
 	);
 }
@@ -11,11 +16,6 @@ function ButtonDemo(props) {
 ButtonDemo.propTypes = {
 	text: PropTypes.string,
 	callBack: PropTypes.func,
-};
-
-ButtonDemo.defaultProps = {
-	text: 'Default button!',
-	callBack: () => {},
 };
 
 export default ButtonDemo;
