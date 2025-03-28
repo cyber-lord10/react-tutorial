@@ -1,7 +1,7 @@
-import Card from './components/Card';
+import CardDemo from './components/CardDemo.jsx';
 
 function App() {
-	return <Card />;
+	return <CardDemo />;
 }
 
 export default App;

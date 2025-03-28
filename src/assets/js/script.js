@@ -1,2 +1,2 @@
-// console.log(navigator.language);
-console.log(navigator);
+// const nextEle = document.querySelector('.btn').;
+// console.log(nextEle);
