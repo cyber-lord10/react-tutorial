@@ -1,21 +1,16 @@
+import ProfilePictureDemo from './ProfilePictureDemo.jsx';
+import CardTitleDemo from './CardTitleDemo.jsx';
 import ButtonDemo from './ButtonDemo.jsx';
-import ProfilePicture from './ProfilePicture.jsx';
 
-function CardDemo() {
-	const callBack = (e) => {
-		const nextEle = e.target.nextElementSibling;
-		if (nextEle) {
-			nextEle.textContent = 'You clicked my senior!!';
-			nextEle.classList.add('para');
-			alert('Button clicked!');
-		}
-	};
-
+function CardDemo({ title, title, details, btnTxt, btnCallBack }) {
 	return (
-		<>
-			<ButtonDemo callBack={callBack} />
-			<p></p>
-		</>
+		<div className='card'>
+			<ProfilePictureDemo url={img ?? null} />
+			<CardTitleDemo text={title ?? null} />
+			<CardDetails text={details ?? null} />
+			<ButtonDemo text={btnTxt ?? null} callBack={btnCallBack ?? null} />
+			<p text={extraDetails ?? null} />
+		</div>
 	);
 }
 
