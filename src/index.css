@@ -34,14 +34,40 @@ body {
 	padding: 10px 13px;
 	font-size: 18px;
 	color: #babaeb;
+	font-style: italic;
 }
+
+/* ================== Grid *START* ==================== */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 0;
+}
+/* =================== Crid *END* ===================== */
 
 /* ================== Card *START* ==================== */
 
 .card {
-	background-color: rgb(207, 207, 207);
+	background-color: rgb(233, 233, 233);
 	border-radius: 12px;
+	margin: 1.23em;
+	transition: all 0.5s ease;
 }
+
+.card:hover {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	transform: translateY(-5px);
+}
+
+.card__image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 12px 12px 0 0;
+}
+
+
 
 .card-image-8 {
 	border-radius: 12px;
@@ -53,6 +79,11 @@ body {
 
 .card-profile-image {
 	border-radius: 50%;
+}
+
+.card__extradetails {
+	background-color: palevioletred;
+	padding: 40px;
 }
 
 /* ===================== Card *END* =================== */

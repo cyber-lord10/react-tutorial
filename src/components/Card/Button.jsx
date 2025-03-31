@@ -5,7 +5,7 @@ const defCallBack = () => {
 	alert('Default button clicked!');
 };
 
-function ButtonDemo({ text = defText, callBack = defCallBack }) {
+function Button({ text = defText, callBack = defCallBack }) {
 	return (
 		<button type='button' className='btn' onClick={callBack}>
 			{text}
@@ -13,9 +13,9 @@ function ButtonDemo({ text = defText, callBack = defCallBack }) {
 	);
 }
 
-ButtonDemo.propTypes = {
+Button.propTypes = {
 	text: PropTypes.string,
 	callBack: PropTypes.func,
 };
 
-export default ButtonDemo;
+export default Button;
