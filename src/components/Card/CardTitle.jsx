@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const defText = 'DEFAUL TITLE';
+const defText = 'default title';
 
 function CardTitle({ text = defText }) {
 	return <h3 className='card__title'>{text}</h3>;

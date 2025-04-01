@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const defText = 'DEFAULT DETAILS';
+const defText = 'default details';
 
 function CardDetails({ text = defText }) {
 	return <p className='card__details'>{text}</p>;

@@ -9,7 +9,8 @@
 }
 
 body {
-	padding: 20px 25px;
+	padding: 8px 10px;
+	font-family: 'Poppins', sans-serif;
 }
 
 .btn {
@@ -22,6 +23,11 @@ body {
 	color: #f5f5dc;
 	background-color: #1e0080;
 	border: 1px solid #494164bb;
+	cursor: pointer;
+}
+
+.btn::first-letter {
+	text-transform: uppercase;
 }
 
 .btn:hover,
@@ -48,15 +54,22 @@ body {
 /* ================== Card *START* ==================== */
 
 .card {
-	background-color: rgb(233, 233, 233);
+	position: relative;
+	background: rgb(233, 233, 233);
 	border-radius: 12px;
-	margin: 1.23em;
-	transition: all 0.5s ease;
+	margin: 0.75em;
+	transition: 0.5s ease;
+	height: auto;
 }
 
 .card:hover {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	transform: translateY(-5px);
+}
+
+.card:hover .card__tooltip {
+	opacity: 1;
+	visibility: visible;
 }
 
 .card__image {
@@ -67,6 +80,66 @@ body {
 	border-radius: 12px 12px 0 0;
 }
 
+.card__title {
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: #1e0080;
+	text-transform: capitalize;
+	margin: 10px 0;
+}
+
+.card__body {
+	padding: 10px 20px;
+	height: calc(100% - 200px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card__details {
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: rgba(36, 36, 36, 0.712);
+}
+
+.card__btn-container {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding-bottom: 10px;
+}
+
+.card__tooltip {
+		visibility: hidden;
+    width: 120px;
+    background-color: #11004aaf;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: calc(100% + 15px); 
+    left: 50%;
+    margin-left: -60px; 
+    opacity: 0; 
+    transition: opacity 0.5s; 
+		
+}
+
+.card__tooltip::first-letter {
+	text-transform: uppercase;
+}
+.card__tooltip::after {
+	content: "";
+	position: absolute;
+	top: 100%; 
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #11004aaf transparent transparent transparent;
+}
 
 
 .card-image-8 {
